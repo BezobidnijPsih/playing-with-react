@@ -5,16 +5,16 @@ class Detail extends React.Component {
     buttonClicked() {
         console.log('Button was clicked!')
     }
-    
+
     render() {
         return (<div>
-            <p>Hello, {this.props.message}</p>
+            <p>Hello, {this.props.message}!</p>
             <button onClick={this.buttonClicked}>Click me</button>
         </div>);
     }
 }
 
-Detail.propTypes = {
+Detail.PropTypes = {
     message: PropTypes.string.isRequired,
 };
 
