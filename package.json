@@ -6,7 +6,7 @@
   "scripts": {
     "precommit": "npm run lint",
     "commitmsg": "npm run lint:msg",
-    "lint": "eslint --fix --cache --ignore-path .gitignore --ext .jsx,.js app",
+    "lint": "eslint --cache --ignore-path .gitignore --ext .jsx,.js app",
     "lint:msg": "validate-commit-msg",
     "test": "npm run lint",
     "build": "webpack",
@@ -45,34 +45,14 @@
     "eslint-plugin-react": "latest",
     "husky": "^0.12.0",
     "open-browser-webpack-plugin": "0.0.3",
+    "pre-commit": "^1.2.2",
     "style-loader": "~0.13.1",
-    "validate-commit-msg": "2.x",
     "webpack": "latest",
     "webpack-dev-server": "latest"
   },
-  "keywords": [
-    "es6",
-    "web app",
-    "boilerplate"
-  ],
-  "author": "Ruan Yifeng",
-  "license": "MIT",
+  "pre-commit": [ "lint" ],
+  "author": "Tetiana Mulenko",
   "config": {
-    "validate-commit-msg": {
-      "types": [
-        "feat",
-        "fix",
-        "docs",
-        "style",
-        "refactor",
-        "perf",
-        "test",
-        "chore",
-        "revert"
-      ],
-      "warnOnFail": false,
-      "maxSubjectLength": 100
-    },
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
